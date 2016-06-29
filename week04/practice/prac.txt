@@ -1,0 +1,16 @@
+#! /usr/bin/perl
+
+
+use strict;
+use warnings;
+
+
+my $len = @INC;
+
+
+foreach my $i (1 .. $len){
+
+
+	print "$INC[$i]\n";
+
+}

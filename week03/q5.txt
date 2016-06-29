@@ -1,0 +1,47 @@
+#! /usr/bin/perl
+
+use strict;
+use warnings;
+
+#10 random DNA files can be found in ~/proj/week3/practice
+
+
+for (my $i = 1; $i<=10; $i++) {
+
+	
+	my $file = "./seq$i";
+
+	open(my $IN, '<', $file) or die ("Can't open $file ($!)");
+
+
+	while(my $line = <$IN>){
+
+		chomp $line;
+
+		if ($line =~ /A{4,}/){
+	
+			print "A run found in ./seq$i\n";
+
+		}#close if
+		elsif ($line =~ /T{4,}/){
+
+			print "T run found in ./seq$i\n";
+
+		}#close elsif
+		elsif ($line =~ /G{4,}/){
+
+			print "G run found in ./seq$i\n";
+
+		}#close elsif
+		elsif ($line =~ /C{4,}/){
+
+			print "C run found in ./seq$i\n";
+
+		}#close elsif
+
+	}#close while
+
+	close $IN;
+
+
+}#closes for

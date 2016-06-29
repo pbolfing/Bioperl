@@ -1,0 +1,5 @@
+#! /bin/sh
+
+	i=bye
+
+	echo $i

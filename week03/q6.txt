@@ -1,0 +1,44 @@
+#! /usr/bin/perl
+
+use strict;
+use warnings;
+
+
+my $x = 0;
+
+print "Enter regexp: ";
+my $reg_exp = <STDIN>;
+chomp($reg_exp);
+
+while ($x == 0){ 
+
+	#print "Enter regexp: ";
+	#my $reg_exp = <STDIN>;
+
+
+	print "Enter string or 'exit' to exit: ";
+	my $s_string = <STDIN>;
+	chomp($s_string);
+
+	if ($s_string eq "'exit'"){
+
+		$x = 1;
+		print "bye bye!\n";
+
+	}#close if
+	elsif ($s_string ne "'exit'"){
+
+		$x = 0;
+
+		if ($s_string =~ /$reg_exp/){
+
+			print "Match!\n";
+
+		}#close if
+		else{
+
+			print "No Match!\n";
+
+		}#close else
+	}#close elsif
+}#close while

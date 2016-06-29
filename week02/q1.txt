@@ -1,0 +1,8 @@
+#! /bin/sh/
+
+	for i in changes makefile bin cgi doc etc html lib sbin src ; do
+		mkdir -p proj/$i
+	done
+
+
+#code ran in proj/week02/practice folder

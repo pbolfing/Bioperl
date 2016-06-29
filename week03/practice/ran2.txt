@@ -1,0 +1,15 @@
+#! /usr/bin/perl
+
+use strict;
+use warnings;
+
+print add (1, 2);
+
+sub add{
+
+	my( $x, $y) = ( @_);
+	my $result = $x + $y;
+	return ("$x + $y = $result\n" );
+
+
+}

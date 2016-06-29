@@ -1,0 +1,19 @@
+#! /usr/bin/perl
+
+use strict;
+use warnings;
+
+
+print "enter: ";
+my $x = <STDIN>;
+chomp($x); 
+my $y = "hello";
+
+if ($x eq $y){
+
+	print "Match";
+}
+elsif ($x ne $y){
+
+	print "No Match";
+}

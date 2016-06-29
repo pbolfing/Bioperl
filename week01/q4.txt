@@ -1,0 +1,9 @@
+For this question I read it as copy only the files from the subdirectories to the new directory and so I implemented the following script to do this
+
+	$cp -r ~/my_project/{cgi,html}/* ~/public_html
+
+I have an example of this in /week01/proj2. Here I copied the cgi and html files I created in ~/week01/proj/{cgi,html} respectively, into /week01/proj2/public_html.
+
+Now if I wanted to copy the files and keep the subdirectory structure, I could do this with a very similar script to the one above
+
+	$cp -r ~/my_project/{cgi,html} ~/public_html

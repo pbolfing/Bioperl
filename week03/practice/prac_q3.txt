@@ -1,0 +1,29 @@
+#! /usr/bin/perl
+
+use strict;
+use warnings;
+
+
+
+	
+my $dna;
+
+for( my $i = 0; $i < 25; $i++){
+
+		$dna = $dna . rand_nucleotide();
+
+	}#close for
+
+	print "$dna\n";
+
+
+sub rand_nucleotide{
+
+	my (@tide_array) = ('A', 'T', 'G', 'C');
+
+	my $tide = $tide_array[rand @tide_array];
+
+	return ($tide);
+
+
+}#close rand_nucleotide

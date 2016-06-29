@@ -1,0 +1,27 @@
+#! /usr/bin/perl
+
+use strict;
+use warnings;
+
+
+print  multi_table(5);
+
+sub multi_table{
+
+	my ($x) = ( @_);
+
+	for (my $i = 1; $i <= $x; $i++){
+		for (my $j = 1; $j <= $x; $j++){
+
+			my $k = $i * $j;
+			print "$k "; 		
+
+		}
+
+		print "\n"
+
+	}
+
+}
+
+
