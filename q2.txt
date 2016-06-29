@@ -1,1 +1,12 @@
-I am choosing to use Vi as my choice, for now. The reason for this is two fold, one Vi is universal and two Vi is the editor that I have the most experiece with, though it is still rather limitied.  I will continue to play around with emacs because it appears to have some advantages over Vi and my in the future find it more useful. But for now I will run with Vi and see how I do.
+#! /bin/sh
+
+#For this question I read it as copy only the files from the subdirectories to the new directory and so I implemented the following script to do this
+
+	for i in cgi html ; do
+		cp -r ~/my_project/$i/* ~/public_html
+	done
+
+#	$cp -r ~/my_project/{cgi,html}/* ~/public_html
+
+# I have an example of this in /week02/proj2. Here I copied the cgi and html files I created in ~/week02/practice/proj/{cgi,html} respectively, into /week02/practice/proj2/public_html.
+

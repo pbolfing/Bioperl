@@ -1,5 +1,18 @@
-Here is my script for creating the basic project directory that is described in the lecture.
+#! /bin/sh
 
-	$mkdir -p proj/{changes,makefile,bin,cgi,doc,etc,html,lib,sbin,src}
+#I know the hint was to use the test command but I was having issues get the sytax for more than one file down, but found the -u option for cp and found it did the same thing
 
-I have implemented this script in the directory ~/week01/project to ensure it does what I expect.
+	for i in cgi html ; do
+		
+	#	if [[ ~/my_project/$1/* -nt ~/public_html ]]; then
+
+			cp -r -u ~/my_project/$i/* ~/public_html
+	# 	fi	
+
+	done
+
+#	$cp -r ~/my_project/{cgi,html}/* ~/public_html
+
+# I have an example of this in /week02/practice/proj2. Here I only copied the cgi and html files I updated in ~/week02/practice/proj/{cgi,html} respectively, into /week02/practice/proj2/public_html.
+
+
