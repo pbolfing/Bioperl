@@ -1,0 +1,1 @@
+I have created my git repository under the proj directory.

@@ -1,0 +1,5 @@
+Here is my script for creating the basic project directory that is described in the lecture.
+
+	$mkdir -p proj/{changes,makefile,bin,cgi,doc,etc,html,lib,sbin,src}
+
+I have implemented this script in the directory ~/week01/project to ensure it does what I expect.
