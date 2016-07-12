@@ -1,0 +1,33 @@
+The tables that I created can be found in the test database in proj/week06.
+
+The tables were created using the following code in sqlite3
+
+
+create table mRNA (
+     gene_ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+     gene_Name VARCHAR(255) NOT NULL,
+     org INTEGER NOT NULL,
+     gene_Seq VARCHAR(255) NOT NULL,
+     tis INTEGER NOT NULL,
+     express INTEGER NOT NULL,
+     start_RF INTEGER NOT NULL,
+     stop_RF NOT NULL
+);
+
+create table organism (
+     org_ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+     org_Name VARCHAR(255) NOT NULL
+);
+
+create table tissue (
+     tis_ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+     tis_Name VARHCAR(255) NOT NULL
+);
+
+create table express_Level (
+     express_ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+     express_Lev VARCHAR(255)
+);
+
+
+I realize as I am typing this up that since the expression level is a number an not a string, it doesn't need its own table because it depends on the gene.  When I designed these tables, I was thinking that there was various levels of expression that could be given based on a string and so allow for easy updating I put expression in its own table.  To see the table layout see week05 q4.osb.
