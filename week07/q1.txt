@@ -1,0 +1,15 @@
+#! /bin/sh
+
+#this program is very generic and could be update to include specific directories and file types.
+#it does copy subdirectories to
+
+
+	for i in *.* ; do
+		
+			cp -r ~/old_dir/$i ~/new_dir/$i
+	
+
+	done
+
+
+
