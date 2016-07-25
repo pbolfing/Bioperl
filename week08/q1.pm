@@ -18,6 +18,8 @@ sub cut_dna {
      my $in_dna = shift;
      my $rec_seq = $self-> rec_seq;
      my $out_dna;
+     my @frags;
+     my $insert;
 
 
      if ($in_dna =~ m/$rec_seq/){
@@ -26,11 +28,22 @@ sub cut_dna {
      
           while($out_dna =~ m/$rec_seq/){
 
-               $out_dna =~ s/$rec_seq//;
+               if ($out_dna =~ s/(.*)($rec_seq)(.*)/$1/){
+
+                    $insert = $3; 
+               
+                    if ($insert =~ /\S+/){
+                                      
+                         unshift (@frags, $insert);
+
+                    }#close if
+               }#close if
 
           }#close while
 
-          return $out_dna;
+          unshift (@frags, $out_dna);
+
+          return \@frags;
 
      }#close if
      else {
