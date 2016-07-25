@@ -43,7 +43,7 @@ sub cut_dna {
 
           unshift (@frags, $out_dna);
 
-          return \@frags;
+          return @frags;
 
      }#close if
      else {
