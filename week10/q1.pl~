@@ -81,7 +81,8 @@ while($j != 0){
      }#close else
 
 }#close while
-
+#print $results_2->[0]->accession;
+#print $results_2->[1]->accession;
 
 
 sub run_blast {
