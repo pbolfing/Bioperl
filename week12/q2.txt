@@ -1,0 +1,46 @@
+The tables were created using the following code in sqlite3
+
+create table friend (
+     friend_ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+     first_name VARCHAR(255) NOT NULL,
+     last_name VARCHAR(255) NOT NULL,
+     cat_ID_1 INTEGER NOT NULL,
+     cat_ID_2 INTEGER,
+     cat_ID_3 INTEGER
+);
+
+create table category (
+     cat_ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+     cat_descrip VARCHAR,
+     cat_name VARCHAR(255) NOT NULL
+);
+
+create table retailer (
+     retailer_ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+     retailer_descrip VARCHAR,
+     retailer_name VARCHAR(255) NOT NULL
+);
+
+create table gift (
+     gift_ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+     gift_descrip VARCHAR,
+     gift_name VARCHAR(255) NOT NULL,
+     manu_ID INTEGER NOT NULL,
+     price DECIMAL(,2) NOT NULL,
+     cat_ID INTEGER NOT NULL,
+     retailer_ID INTEGER NOT NULL
+);
+
+create table manufacturer (
+     manu_ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+     manu_descrip VARCHAR,
+     manu_name VARCHAR(255)
+);
+
+The idea for this database is that each friend can have up to three gift
+categories, with one being required. Then to search for gifts for your friend
+you simply query cat_ID for that friend and return the gifts with their name,
+description, price, retailer and whatevery other metadata is available. So this 
+relationship is one to many with the one being the category and the many being the gift.
+The relationship of the friend to category is one to one just repeated a couple times
+to ensure proper coverage of friends interests.
